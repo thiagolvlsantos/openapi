@@ -1,9 +1,6 @@
 # OpenAPI
 Example on how to load an OpenAPI file in a frontend Swagger.
 
-# Control-S Directive
-There is also is a directive to intercept 'Ctrl+s' comands and convert them to a 'click' event on the 'clickOn' reference (id).
-
 # Steps to setup Swagger-UI
 
 ## Packages 
@@ -25,3 +22,6 @@ There is also is a directive to intercept 'Ctrl+s' comands and convert them to a
 	...
 	(window as any).Buffer = Buffer;
 	```
+	
+# Extra: Control-S Directive
+There is also is a directive to intercept 'Ctrl+s' comands and convert them to a 'click' event on the 'clickOn' reference (id).
