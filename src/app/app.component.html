@@ -1,0 +1,22 @@
+<html control-s clickOn="save">
+
+<body>
+  <table>
+    <tr>
+      <td>Editor
+      <input type="button" value="Toogle" id="save" (click)="control.visible = !control.visible" #control/>
+      <span *ngIf="control.visible; else closed">
+        Open
+      </span>
+      <ng-template #closed>
+        Close
+      </ng-template>
+      </td>
+    </tr>
+    <tr>
+      <td><div id="idOnScreen">Swagger appears here</div></td>
+    </tr>
+  </table>
+</body>
+
+</html>
