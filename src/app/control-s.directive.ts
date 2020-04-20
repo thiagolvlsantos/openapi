@@ -6,6 +6,7 @@ import { Directive,Input,HostListener } from '@angular/core';
 export class ControlSDirective {
 
   @Input() clickOn: string;
+  @Input() delay?: number = 100; // ms
 
   //https://medium.com/claritydesignsystem/four-ways-of-listening-to-dom-events-in-angular-part-2-hostlistener-1b66d45b3e3d
   @HostListener('keydown', ['$event'])
@@ -39,7 +40,7 @@ export class ControlSDirective {
   click() {
     let ref = document.getElementById(this.clickOn);
     if(ref) {
-      ref.click();
+      setTimeout(() => { ref.click() }, this.delay);
       return true;
     }
     console.log("Control+S:"+this.clickOn+" not found.");
